@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+@media (max-height: 500px) {
+    #map {
+      height: 200px;
+    }
+  }
+
