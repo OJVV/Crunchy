@@ -103,10 +103,11 @@
                             <div class="col-md-4">
                                 <div class="card bg-transparent border my-3 my-md-0">
 
-                                    <div class="h-60">
+                                    <div class="h-full">
                                         <img src="{{ asset('storage/menu/' . $menu->project_image) }}"
                                         alt="template by DevCRID http://www.devcrud.com/"
                                             class="rounded-0 card-img-top mg-responsive object-cover max-w-full max-h-full"
+                                            loading="lazy"
                                         >
 
                                     </div>
@@ -174,7 +175,7 @@
                             <div class="col-md-4">
                                 <div class="card bg-transparent border my-3 my-md-0">
 
-                                    <div class="h-60">
+                                    <div class="h-full">
                                         <img src="{{ asset('storage/bebida/' . $bebida->project_image) }}"
                                         alt="template by DevCRID http://www.devcrud.com/"
                                             class="rounded-0 card-img-top mg-responsive object-cover max-w-full max-h-full"
@@ -249,7 +250,7 @@
                             <div class="col-md-4">
                                 <div class="card bg-transparent border my-3 my-md-0">
 
-                                    <div class="h-60">
+                                    <div class="h-full">
                                         <img src="{{ asset('storage/pollo/' . $pollo->project_image) }}"
                                         alt="template by DevCRID http://www.devcrud.com/"
                                             class="rounded-0 card-img-top mg-responsive object-cover max-w-full max-h-full"
@@ -325,7 +326,7 @@
                             <div class="col-md-4">
                                 <div class="card bg-transparent border my-3 my-md-0">
 
-                                    <div class="h-60">
+                                    <div class="h-full">
                                         <img src="{{ asset('storage/combo/' . $combo->project_image) }}"
                                         alt="template by DevCRID http://www.devcrud.com/"
                                             class="rounded-0 card-img-top mg-responsive object-cover max-w-full max-h-full"
