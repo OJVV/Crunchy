@@ -105,9 +105,9 @@
 
                                     <div class="h-full">
                                         <img src="{{ asset('storage/menu/' . $menu->project_image) }}"
-                                        alt="template by DevCRID http://www.devcrud.com/"
+                                        alt="Imagen Entrada"
                                             class="rounded-0 card-img-top mg-responsive object-cover max-w-full max-h-full"
-                                            loading="lazy"
+                                       
                                         >
 
                                     </div>
