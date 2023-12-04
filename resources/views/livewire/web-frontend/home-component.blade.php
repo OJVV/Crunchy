@@ -451,7 +451,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <h3 class=" font-paint-cans">Email</h3>
-                        <P class="text-muted font-paint-cans">info@website.com</P>
+                        <P class="text-muted font-paint-cans">crunchytruck@gmail.com</P>
                     </div>
                     <div class="col-sm-4">
                         <h3 class=" font-paint-cans">Contáctanos</h3>
