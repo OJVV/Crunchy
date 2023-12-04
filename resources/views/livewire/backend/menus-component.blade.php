@@ -34,41 +34,37 @@
                         </select>
                     </div>
                     <div class="col-md-3 text-right">
-                        <a href="{{route('addMenu')}}" class="btn btn-success">Agregar Nueva Entrada</a>
+                        <a href="{{route('addMenu')}}" class="btn btn-success bg-yellow-600 font-bold">Añadir Entrada</a>
                     </div>
                 </div>
-                <div class="table-responsive">
-                    <table class="table table-bordered w-full text-center">
-                        <thead>
-                            <tr>
-                                <th class="flex-col  text-black">Id</th>
-                                <th class="flex-col  text-black">Categoria</th>
-                                <th class="flex-col  text-black">Title</th>
-                                <th class="flex-col  text-black">Image</th>
-                                <th class="flex-col  text-black">Descripcion</th>
-                                <th class="flex-col  text-black">Precio</th>
-                                <th class="flex-col  text-black">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($menus as $menu)
-                            <tr>
-                                <td  class=" text-black" >{{$menu->id}}</td>
-                                <td  class=" text-black">{{$menu->categoria}}</td>
-                                <td  class=" text-black">{{$menu->title}}</td>
-                                <td><img src="{{ asset('storage/menu/' . $menu->project_image) }}" width="120" class="img-thumbnail" alt="img"></td>
-                                <td  class=" text-black">{{$menu->descripcion}}</td>
-                                <td  class=" text-black">{{$menu->precio}}</td>
-                                        
-                                <td class="">
-                                  
-                                    <a href="{{route('editMenu', ['id'=>$menu->id])}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
-                                    <button href="#" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-1" wire:click.prevent="deleteMenu('{{$menu->id}}')">Delete</button>
-                                </td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                    @forelse ($menus as $menu )
+                        
+                        <div class="p-6 bg-white border-b border-gray-200 md:flex md:justify-between md:items-center">
+                            <div class="leading-10">
+                                <a href="#" class="text-xl font-bold text-black">
+                                    {{$menu->title}}
+                                </a>
+                                <img src="{{ asset('storage/menu/' . $menu->project_image) }}" width="120" class="img-thumbnail" alt="img"></td>
+            
+                            </div>
+                
+                            <div class="flex flex-col md:flex-row items-stretch gap-3 mt-5 md:mt-0">
+                                <a href="{{route('editMenu', $menu->id)}}" class="bg-blue-800 py-2 px-4 rounded-lg text-white text-xs font-bold uppercase text-center">
+                                    Editar
+                                </a>
+                
+                                <button type="button"  wire:click.prevent="deleteMenu('{{$menu->id}}')"  class="bg-red-600 py-2 px-4 rounded-lg text-blue text-xs font-bold uppercase text-center">
+                                    Eliminar
+                                </button>
+                            </div>
+                        </div>
+                
+                    @empty 
+                
+                    <p class="p-3 text-center text-sm text-gray-600"> No Hay Trabajo Publicado</p>
+                    @endforelse
+                   
                 </div>
             </div>
         </div>

@@ -45,7 +45,7 @@ class CombosAddComponent extends Component
         session()->flash('success', 'Añadido');
        
        
-        
+        return redirect()->route('combos');
     }
     public function render()
     {

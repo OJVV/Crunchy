@@ -56,7 +56,7 @@ class BebidaseditComponent extends Component
     
         $bebida->save();
         session()->flash('success','Editado Exitosamente');
-
+        return redirect()->route('bebidas');
 
  
     }

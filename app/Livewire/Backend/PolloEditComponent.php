@@ -57,7 +57,7 @@ class PolloEditComponent extends Component
         $pollo->save();
         session()->flash('success','Editado Exitosamente');
 
-
+        return redirect()->route('pollos');
  
     }
     public function render()

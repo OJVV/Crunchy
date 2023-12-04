@@ -15,7 +15,7 @@
             @endif
 
             <div class="bg-white overflow-hidden shadow-xl rounded p-4">
-                <h2 class="font-extrabold text-teal-900 hover:text-teal-600 ml-3 text-2xl">Menú</h2>
+                <h2 class="font-extrabold text-teal-900 hover:text-teal-800 ml-3 text-2xl">Menú</h2>
                 <div class="row">
 
                     <div class="col-md-3 float-left mb-3 ml-2">
@@ -34,42 +34,40 @@
                         </select>
                     </div>
                     <div class="col-md-3 text-right">
-                        <a href="{{route('addPollo')}}" class="btn btn-success">Agregar Nueva Orden Pollo</a>
+                        <a href="{{route('addPollo')}}" class="btn btn-success bg-yellow-600 font-bold">Añadir Orden</a>
                     </div>
                 </div>
-                <div class="table-responsive">
-                    <table class="table table-bordered w-full text-center">
-                        <thead>
-                            <tr>
-                                <th class="flex-col  text-black">Id</th>
-                                <th class="flex-col  text-black">Categoria</th>
-                                <th class="flex-col  text-black">Title</th>
-                                <th class="flex-col  text-black">Image</th>
-                                <th class="flex-col  text-black">Descripcion</th>
-                                <th class="flex-col  text-black">Precio</th>
-                                <th class="flex-col  text-black">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($pollos as $pollo)
-                            <tr>
-                                <td  class=" text-black">{{$pollo->id}}</td>
-                                <td  class=" text-black">{{$pollo->categoria}}</td>
-                                <td  class=" text-black">{{$pollo->title}}</td>
-                                <td><img src="{{ asset('storage/pollo/' . $pollo->project_image) }}" width="120" class="img-thumbnail" alt="img"></td>
-                                <td  class=" text-black">{{$pollo->descripcion}}</td>
-                                <td  class=" text-black">{{$pollo->precio}}</td>
-                                        
-                                <td class="">
-                                  
-                                    <a href="{{route('editPollo', ['id'=>$pollo->id])}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
-                                    <button href="#" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-1" wire:click.prevent="deletePollo('{{$pollo->id}}')">Delete</button>
-                                </td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
+              
+<div>
+    <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+        @forelse ($pollos as $pollo )
+            
+            <div class="p-6 bg-white border-b border-gray-200 md:flex md:justify-between md:items-center">
+                <div class="leading-10">
+                    <a href="#" class="text-xl font-bold text-black">
+                        {{$pollo->title}}
+                    </a>
+                    <img src="{{ asset('storage/pollo/' . $pollo->project_image) }}" width="120" class="img-thumbnail" alt="img"></td>
+
                 </div>
+    
+                <div class="flex flex-col md:flex-row items-stretch gap-3 mt-5 md:mt-0">
+                    <a href="{{route('editPollo', $pollo->id)}}" class="bg-blue-800 py-2 px-4 rounded-lg text-white text-xs font-bold uppercase text-center">
+                        Editar
+                    </a>
+    
+                    <button type="button" wire:click.prevent="deletePollo('{{$pollo->id}}')"  class="bg-red-600 py-2 px-4 rounded-lg text-blue text-xs font-bold uppercase text-center">
+                        Eliminar
+                    </button>
+                </div>
+            </div>
+    
+        @empty 
+    
+        <p class="p-3 text-center text-sm text-gray-600"> No Hay Trabajo Publicado</p>
+        @endforelse
+       
+    </div>
             </div>
         </div>
     </div>

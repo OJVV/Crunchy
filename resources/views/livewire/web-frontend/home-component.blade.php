@@ -103,7 +103,7 @@
                             <div class="col-md-4">
                                 <div class="card bg-transparent border my-3 my-md-0">
 
-                                    <div class="h-full">
+                                    <div class="h-80">
                                         <img src="{{ asset('storage/menu/' . $menu->project_image) }}"
                                         alt="Imagen Entrada"
                                             class="rounded-0 card-img-top mg-responsive object-cover max-w-full max-h-full"
@@ -175,14 +175,14 @@
                             <div class="col-md-4">
                                 <div class="card bg-transparent border my-3 my-md-0">
 
-                                    <div class="h-full">
+                                    <div class="h-80">
                                         <img src="{{ asset('storage/bebida/' . $bebida->project_image) }}"
                                         alt="template by DevCRID http://www.devcrud.com/"
                                             class="rounded-0 card-img-top mg-responsive object-cover max-w-full max-h-full"
                                         >
 
                                     </div>
-                                    <div class="card-body ">
+                                    <div class="card-body">
                                         <h4 class="pt20 pb20 font-paint-cans">{{$bebida->title}}</h4>
                                         <p class="text-black font-paint-cans">{{$bebida->descripcion}}</p>
                                         <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">L. {{$bebida->precio}}</a>
@@ -326,7 +326,7 @@
                             <div class="col-md-4">
                                 <div class="card bg-transparent border my-3 my-md-0">
 
-                                    <div class="h-full">
+                                    <div class="h-80">
                                         <img src="{{ asset('storage/combo/' . $combo->project_image) }}"
                                         alt="template by DevCRID http://www.devcrud.com/"
                                             class="rounded-0 card-img-top mg-responsive object-cover max-w-full max-h-full"
@@ -403,10 +403,7 @@
             <div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn bg-gray-800">
                 <div class="row">
                     <div class="col-md-6 px-0">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.736153022584!2d-88.7782541!3d14.783885999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6409c56d1cbd67%3A0xa3fc69570f1d5b04!2sCrunchy%20Truck!5e0!3m2!1ses-419!2shn!4v1697051418453!5m2!1ses-419!2shn"
-                            width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.7842355906796!2d-88.7808136!3d14.781179799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f640955d04e024f%3A0xf8c9b60cba4c5211!2sFood%20trucks%20Santa%20Rosa!5e0!3m2!1sen!2sde!4v1701685434566!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="col-md-6 px-5 has-height-lg middle-items bg-cr">
                         <h3 class="font-paint-cans text-2xl">Encuéntranos</h3>
@@ -418,7 +415,7 @@
                                     <path
                                         d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
                                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                </svg> Frente a Estadio Sergio Reyes, Food trucks, Santa Rosa 04101</p>
+                                </svg> Frente a Estadio Sergio Reyes, Food trucks, Santa Rosa 0401</p>
 
 
                             <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -461,9 +458,9 @@
                       <p><a href="https://api.whatsapp.com/send?phone=50432082651">+504 3208-2651</a></p>
                     </div>
                     <div class="col-sm-4">
-                        <h3 class=" font-paint-cans">Encuéntranos</h3>
+                        <h3 class=" font-paint-cans">Dirección</h3>
                         <P class="text-muted font-paint-cans">Frente a Estadio Sergio Reyes, Food trucks, Santa Rosa
-                            04101</P>
+                            0401</P>
                     </div>
                 </div>
             </div>

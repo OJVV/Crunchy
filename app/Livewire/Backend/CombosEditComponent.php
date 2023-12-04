@@ -57,7 +57,7 @@ class CombosEditComponent extends Component
         $combo->save();
         session()->flash('success','Editado Exitosamente');
 
-
+        return redirect()->route('combos');
  
     }
     public function render()

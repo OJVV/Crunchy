@@ -11,7 +11,7 @@
                     <form wire:submit.prevent ="addAbout">
                         @csrf
                      <div class="form-group flex flex-row">
-                        <label for="descripcion" width: 100px; class="label-control text-black py-2 mx-2">Slogan<b class="text-danger"></b></label>
+                        <x-label for="descripcion" value="{{ __('Slogan') }}" />
                         <textarea width: 100px; class=" w-full text-black"name="descripcion" id="descripcion" cols="1" rows="1" wire:model='descripcion'></textarea>
                         @error('descripcion')
                             <span class="text-danger">{{$message}}</span>
@@ -19,7 +19,7 @@
                     </div>                        
                         <div class="form-group">
                             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-2 mx-2" type="submit" >
-                                Save
+                                Guardar
                             </button>
                         </div>
                        

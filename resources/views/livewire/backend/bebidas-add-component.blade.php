@@ -17,11 +17,11 @@
               <div class="alert alert-danger" role="alert">{{Session::get('error')}}</div>
            @endif
             <div class="bg-white overflow-hidden shadow-xl rounded p-4">
-                <h2 class="font-extrabold text-teal-900 hover:text-teal-600 ml-3 text-2xl">Añadir Nueva Bebida</h2>
-                <form wire:submit.prevent ="addBebida" enctype="multipart/form-data" method="POST">
+                <h2 class="font-extrabold text-green-900 hover:text-green-600 ml-3 text-2xl">Añadir Nueva Bebida</h2>
+                <form wire:submit.prevent ="addBebida" enctype="multipart/form-data" method="POST"  >
                     @csrf
                  <div class="form-group">
-                    <label for="categoria" class="label-control">Categoria<b class="text-danger">*</b></label>
+                    <x-label for="categoria" value="{{ __('Categoria') }}" />
                    <select name="categoria" id="categoria" class="form-control" wire:model = "categoria">
                     <option value="">Seleccionar Categoria</option>
                     <option value="Bebidas">Bebidas</option>
@@ -32,30 +32,58 @@
                     @enderror
                 </div>
                     <div class="form-group">
-                        <label for="title" class="label-control">Nombre de Bebida<b class="text-danger ">*</b></label>
-                        <input type="text" name="title" id="title" class="form-control w-full mx-2" wire:model='title'>
+                        <x-label for="title" value="{{ __('Bebida') }}" />
+                        <x-input 
+                        id="title" 
+                        class="block mt-1 w-full" 
+                        type="text" 
+                        wire:model="title" 
+                        :value="old('title')" 
+                        placeholder="title"
+                        />
                         @error('title')
                             <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="descripcion" class="label-control">Descripción<b class="text-danger ">*</b></label>
-                        <input type="text" name="descripcion" id="descripcion" class="form-control w-full mx-2" wire:model='descripcion'>
+                        <x-label for="descripcion" value="{{ __('Descripcion') }}" />
+                        <x-input 
+                        id="descripcion" 
+                        class="block mt-1 w-full" 
+                        type="text" 
+                        wire:model="descripcion" 
+                        :value="old('descripcion')" 
+                        placeholder="descripcion"
+                        />
                         @error('descripcion')
                             <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="precio" class="label-control">Precio<b class="text-danger ">*</b></label>
-                        <input type="text" name="precio" id="precio" class="form-control w-full mx-2" wire:model='precio'>
+                        <x-label for="precio" value="{{ __('Precio') }}" />
+                        <x-input 
+                        id="precio" 
+                        class="block mt-1 w-full" 
+                        type="text" 
+                        wire:model="precio" 
+                        :value="old('precio')" 
+                        placeholder="precio"
+                        />
                         @error('precio')
                             <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                    
                     <div class="form-group">
-                        <label for="project_image" class="label-control">Project Image<b class="text-danger">*</b></label>
-                        <input type="file" name="project_image" id="project_image" class="form-control w-full mx-2" wire:model='project_image'>
+                        <x-label for="project_image" value="{{ __('Imagen') }}" />
+                        <x-input 
+                        id="project_image" 
+                        class="block mt-1 w-full" 
+                        type="file" 
+                       wire:model='project_image'
+                       accept="image/*"
+                        />
+            
                        @if($project_image)
                             <img src="{{ $project_image->temporaryurl()}}" width="120" alt="" class="">
                          @endif   
@@ -63,9 +91,9 @@
 
 
                     <div class="form-group">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-2 mx-2" type="submit" >
-                            Save
-                        </button>
+                        <x-button class="mt-2 bg-blue-600">
+                            {{ __('Guardar') }}
+                        </x-button>
                     </div>
                    
                 </form>

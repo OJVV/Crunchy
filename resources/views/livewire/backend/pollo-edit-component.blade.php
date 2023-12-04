@@ -68,7 +68,7 @@
 
                     <div class="form-group">
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-2 mx-2" type="submit" >
-                            Save
+                            Guardar
                         </button>
                     </div>
                    

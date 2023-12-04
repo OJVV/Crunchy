@@ -58,7 +58,7 @@ class MenusEditComponent extends Component
         $menu->save();
         session()->flash('success','Editado Exitosamente');
 
-
+        return redirect()->route('menus');
  
     }
 

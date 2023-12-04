@@ -32,22 +32,43 @@
                     @enderror
                 </div>
                     <div class="form-group">
-                        <label for="title" class="label-control">Nombre de Combo<b class="text-danger ">*</b></label>
-                        <input type="text" name="title" id="title" class="form-control w-full mx-2" wire:model='title'>
+                        <x-label for="title" value="{{ __('Titulo') }}" />
+                        <x-input 
+                        id="title" 
+                        class="block mt-1 w-full" 
+                        type="text" 
+                        wire:model="title" 
+                        :value="old('title')" 
+                        placeholder="title"
+                        />
                         @error('title')
                             <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="descripcion" class="label-control">Descripción<b class="text-danger ">*</b></label>
-                        <input type="text" name="descripcion" id="descripcion" class="form-control w-full mx-2" wire:model='descripcion'>
+                        <x-label for="descripcion" value="{{ __('Descripcion') }}" />
+                        <x-input 
+                        id="descripcion" 
+                        class="block mt-1 w-full" 
+                        type="text" 
+                        wire:model="descripcion" 
+                        :value="old('descripcion')" 
+                        placeholder="descripcion"
+                        />
                         @error('descripcion')
                             <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="precio" class="label-control">Precio<b class="text-danger ">*</b></label>
-                        <input type="text" name="precio" id="precio" class="form-control w-full mx-2" wire:model='precio'>
+                        <x-label for="precio" value="{{ __('Precio') }}" />
+                        <x-input 
+                        id="precio" 
+                        class="block mt-1 w-full" 
+                        type="text" 
+                        wire:model="precio" 
+                        :value="old('precio')" 
+                        placeholder="precio"
+                        />
                         @error('precio')
                             <span class="text-danger">{{$message}}</span>
                         @enderror
@@ -69,7 +90,7 @@
 
                     <div class="form-group">
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-2 mx-2" type="submit" >
-                            Save
+                            Guardar
                         </button>
                     </div>
                    

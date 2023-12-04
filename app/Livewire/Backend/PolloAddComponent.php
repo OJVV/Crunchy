@@ -43,7 +43,9 @@ class PolloAddComponent extends Component
         $pollo->save();
 
         session()->flash('success', 'Añadido');
-       
+
+        return redirect()->route('pollos');
+      
        
         
     }

@@ -16,7 +16,7 @@ class PollosComponent extends Component
         $project = Pollo::find($id);
         $project->delete();
         session()->flash('success', 'Eliminado');
-        redirect('/menus');
+        redirect('/pollos');
     }
     public function render()
     {

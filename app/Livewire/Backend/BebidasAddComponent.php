@@ -43,6 +43,7 @@ class BebidasAddComponent extends Component
         $bebida->save();
 
         session()->flash('success', 'Añadido');
+        return redirect()->route('bebidas');
        
        
         

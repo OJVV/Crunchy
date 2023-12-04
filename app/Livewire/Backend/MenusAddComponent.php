@@ -46,7 +46,7 @@ class MenusAddComponent extends Component
         session()->flash('success', 'Añadido');
        
        
-        
+        return redirect()->route('menus');
     }
     public function render()
     {
